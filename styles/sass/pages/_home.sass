@@ -1,0 +1,137 @@
+@import '../layout/header'
+@import '../layout/footer'
+
+main#main
+    grid-column: 1 / -1
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(3, auto)
+
+    #intro-main
+        grid-column: 1 / -1
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        align-items: center
+
+        h2
+            text-align: center
+            font-weight: 600
+            font-size: 28px
+            // transform: scale(.8)
+
+
+
+        h2 + p
+            color: var.$secondaryText
+            margin: 5px 0
+            font-size: 12px
+
+        @include mix.min(375px)
+            h2
+                font-size: 32px
+            
+            h2 + p 
+                font-size: 13px
+
+        
+        @include mix.min(425px)
+            h2
+                font-size: 36px
+
+            h2 + p 
+                font-size: 14px
+
+        @include mix.min(md)
+            h2
+                font-size: 38px
+
+        .bold
+            font-weight: 900
+
+        .d-switch
+            display: none
+
+        .regular
+            display: flex
+            flex-direction: column
+            align-items: center
+
+    #img-main
+        grid-column: 1 / -1
+        display: flex
+        justify-content: center
+        align-items: center
+
+        img
+            width: 75%
+            max-width: 592px
+
+    .continue-main
+        grid-column: 1 / -1
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+
+        .btn-google
+            font-family: var.$robo
+            padding: 8px 48px
+            cursor: pointer
+            @extend %btn-google
+
+        .btn-another
+            font-size: 12px
+            padding: 6px
+            @extend %btn-trans
+
+    @include mix.min(lg)
+        grid-gap: 0 80px
+
+        #intro-main
+            grid-column:  1 / 2
+            grid-row: 1 / -1
+            align-items: center
+            justify-content: center
+            align-items: flex-end
+
+            h2
+                text-align: start
+
+            .d-switch
+                display: flex
+
+            .regular
+                align-items: flex-start
+
+            .flex-start
+                margin-top: 20px
+                align-items: flex-start
+                .btn-another
+                    padding: 6px 0 0 0
+            
+        #img-main
+            grid-column: 2 
+            grid-row: 1 / 4
+            justify-content: flex-start
+
+        .continue-main
+            display: none
+
+    @include mix.min(xxl)
+        grid-gap: 0 150px
+
+        #intro-main
+            h2
+                font-size: 54px
+
+    @include mix.min(2400px)
+        grid-gap: 0 360px
+
+        #intro-main
+            h2
+                font-size: 72px
+        #img-main
+            img
+                width: 50%
+                max-width: 968px

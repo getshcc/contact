@@ -1,0 +1,10 @@
+@use 'variables'    as var
+
+@function light($input)
+    @return map-get(var.$light-theme, $input)
+
+@function dark($input)
+    @return map-get(var.$dark-theme, $input)
+
+@function break($size)
+    @return map-get(var.$breakpoints, $size)

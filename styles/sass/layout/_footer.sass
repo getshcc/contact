@@ -1,0 +1,29 @@
+footer#footer
+    grid-column: 1 / -1
+    display: flex
+    justify-content: center
+    align-items: center
+
+    ul
+        display: flex
+    
+    a
+        padding: 0px 4px
+        color: var.$secondaryText
+        font-size: 11px
+    
+    #copyright
+        display: none
+        p
+            font-size: 11px
+            color: var.$secondaryText
+        a
+            font-weight: 600
+    
+    @include mix.min(md)
+        padding: 0 36px
+        justify-content: space-between
+        align-items: center
+        
+        #copyright
+            display: flex

@@ -1,0 +1,13 @@
+@use 'functions'    as func
+
+
+// mixin for max-width media query
+@mixin max($width)
+    @media screen and(max-width: func.break($width) or $width)
+        @content
+
+// mixin for min-width media query
+@mixin min($width)
+    @media screen and(min-width: func.break($width) or $width)
+        @content
+    

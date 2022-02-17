@@ -1,0 +1,22 @@
+@use 'sass:map'
+@use 'core/reset'
+@use 'abstracts/variables'  as var
+@use 'abstracts/mixins'     as mix
+@use 'abstracts/functions'  as func
+
+body
+    width: 100vw
+    height: 100vh
+    display: grid
+    grid-template-columns: repeat(12, 1fr)
+    grid-template-rows: 50px auto 20px
+    grid-gap: 12px 0px
+    overflow-x: hidden
+    background-color: var.$background
+    color: var.$text
+    padding: 12px
+    font-family: var.$mont
+
+
+
+    @import 'pages/home'
