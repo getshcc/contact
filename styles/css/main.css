@@ -8,6 +8,10 @@
   background-color: #CCD6E5;
 }
 
+*:focus {
+  outline: none;
+}
+
 a {
   text-decoration: none;
   color: #000;
@@ -37,15 +41,24 @@ body main#main .continue-main .btn-another, body header#header #btn-account {
   color: #8392AA;
   background-color: transparent;
 }
-body main#main .continue-main .btn-google {
+body main#main-account .form .btn-google, body main#main .continue-main .btn-google {
   display: flex;
   background-color: #ffffff;
   color: #444;
+  font-family: "Roboto", sans-serif;
+  padding: 8px 48px;
+  cursor: pointer;
   justify-content: center;
   align-items: center;
-  padding: 20px 50px;
   border: 1px solid #CCD6E5;
   border-radius: 3px;
+  margin-bottom: 12px;
+}
+body main#main-account .form .btn-new, body main#main-account .form .btn-login {
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+  font-weight: 600;
 }
 body header#header {
   grid-column: 1/-1;
@@ -198,11 +211,6 @@ body main#main .continue-main {
   align-items: center;
   flex-direction: column;
 }
-body main#main .continue-main .btn-google {
-  font-family: "Roboto", sans-serif;
-  padding: 8px 48px;
-  cursor: pointer;
-}
 body main#main .continue-main .btn-another {
   font-size: 12px;
   padding: 6px;
@@ -262,6 +270,74 @@ body main#main .continue-main .btn-another {
     width: 50%;
     max-width: 968px;
   }
+}
+body main#main-account .form .match {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body header#header .switch {
+  display: none !important;
+}
+body main#main-account {
+  grid-column: 1/-1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body main#main-account h3 {
+  font-size: 22px;
+  margin: 12px;
+  display: flex;
+  align-self: flex-start;
+}
+body main#main-account .form-box {
+  width: 85%;
+  max-width: 400px;
+  height: auto;
+  padding: 12px;
+}
+body main#main-account .form {
+  padding: 12px;
+  background-color: #ffffff;
+}
+body main#main-account .form form {
+  display: flex;
+  flex-direction: column;
+}
+body main#main-account .form label {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+body main#main-account .form input {
+  margin-bottom: 10px;
+  background-color: rgba(204, 214, 229, 0.2);
+  border: 0;
+  padding: 12px;
+  border-radius: 3px;
+}
+body main#main-account .form .btn-login {
+  margin-top: 8px;
+  background-color: #28A745;
+  color: #ffffff;
+}
+body main#main-account .form .btn-new {
+  margin-top: 8px;
+  background-color: #007BFF;
+  color: #ffffff;
+}
+body main#main-account .form .match {
+  width: 100%;
+}
+body main#main-account .form .match a {
+  font-size: 11px;
+  padding: auto;
+  padding-top: 12px;
+  color: #8392AA;
 }
 
 /*# sourceMappingURL=main.css.map */

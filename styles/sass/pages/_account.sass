@@ -1,0 +1,78 @@
+%match
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+header#header
+    .switch
+        display: none !important
+
+main#main-account
+    grid-column: 1 / -1
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+    h3
+        font-size: 22px
+        margin: 12px
+        display: flex
+        align-self: flex-start
+
+    .form-box
+        width: 85%
+        max-width: 400px
+        height: auto
+        // background-color: var.$white
+        padding: 12px
+
+    .form
+        padding: 12px
+        background-color: var.$white
+
+        form
+            display: flex
+            flex-direction: column
+
+        label
+            font-size: 12px
+            font-weight: 500
+            margin-bottom: 5px
+
+        input
+            margin-bottom: 10px
+            background-color: rgba(var.$lightBlueGray, .2)
+            border: 0
+            padding: 12px
+            border-radius: 3px
+
+        .btn-google
+            @extend %btn-google
+        
+        .btn-login
+            @extend %btn-ln
+            margin-top: 8px
+            background-color: var.$btnGreen
+            color: var.$white
+
+        .btn-new
+            margin-top: 8px
+            @extend %btn-ln
+            background-color: var.$btnBlue
+            color: var.$white
+        
+        .match
+            width: 100%
+            @extend %match
+
+            a
+                font-size: 11px
+                padding: auto
+                    top: 12px
+                color: var.$secondaryText
+
+    // @include mix.min(700px)
+    //     max-width: 400px
