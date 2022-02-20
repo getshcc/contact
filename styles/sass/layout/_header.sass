@@ -10,6 +10,10 @@ header#header
     .logo
         font-family: var.$lob
         font-size: 20px
+    
+    #logo
+        a
+            color: var.$text
 
     #btn-account
         font-size: 14px
@@ -29,6 +33,10 @@ header#header
                     border-bottom-left-radius: 4px
                     border-bottom-right-radius: 4px
                     font-weight: 600
+                    transition: all .2s ease-in-out
+
+                    &:hover
+                        background-color: darken(var.$mainColor, 10)
         a
             font-size: 15px
             padding: 12px

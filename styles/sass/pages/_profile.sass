@@ -1,0 +1,69 @@
+@mixin flex-center($dir)
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: $dir
+    
+main#main-profile
+    grid-column: 1 / -1
+    display: flex
+    justify-content: center
+
+    #profile
+        width: 100%
+
+    .main-section
+        @include flex-center(column)
+        margin-bottom: 30px
+
+        img
+            width: 30%
+            max-width: 200px
+            min-width: 110px
+
+        h5
+            margin-top: 12px
+            font-size: 24px
+            font-weight: 800
+
+        h5 + p
+            font-size: 13px
+            color: var.$secondaryText
+            margin: 8px 0
+        
+    .contacts
+        @include flex-center(column)
+        
+        article.contact-item
+            width: 95%
+            max-width: 500px
+            background-color: var.$white
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 12px
+            padding: 16px
+            border-radius: 5px
+
+            &:hover
+                img[alt=link-arrow]
+                    transition: all .2s ease-in
+                    transform: scale(1.2)
+
+            .content
+                display: flex
+                align-items: center
+
+                p
+                    font-size: 12px
+                    font-weight: 600
+                    margin-left: 12px
+                    letter-spacing: .3px
+                    color: var.$secondaryText
+            
+
+
+                
+
+            
+            

@@ -1,0 +1,43 @@
+.form
+    padding: 12px
+    background-color: var.$white
+
+    form
+        display: flex
+        flex-direction: column
+
+    label
+        font-size: 12px
+        font-weight: 500
+        margin-bottom: 5px
+
+    input
+        margin-bottom: 10px
+        background-color: rgba(var.$lightBlueGray, .2)
+        border: 0
+        padding: 12px
+        border-radius: 3px
+
+    .btn-google
+        @extend %btn-google
+    
+    .btn-login
+        @extend %btn-ln
+        margin-top: 8px
+        background-color: var.$btnGreen
+        color: var.$white
+
+    .btn-new
+        @extend %btn-ln
+        margin-top: 8px
+        background-color: var.$btnBlue
+        color: var.$white
+    
+    .match
+        @extend %match
+        width: 100%
+        a
+            font-size: 11px
+            padding: auto
+                top: 12px
+            color: var.$secondaryText

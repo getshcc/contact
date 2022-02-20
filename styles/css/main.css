@@ -12,6 +12,10 @@
   outline: none;
 }
 
+body {
+  transition: all 0.2s ease-in-out;
+}
+
 a {
   text-decoration: none;
   color: #000;
@@ -41,7 +45,7 @@ body main#main .continue-main .btn-another, body header#header #btn-account {
   color: #8392AA;
   background-color: transparent;
 }
-body main#main-account .form .btn-google, body main#main .continue-main .btn-google {
+body main#main-account .form-box .form .btn-google, body main#main .continue-main .btn-google {
   display: flex;
   background-color: #ffffff;
   color: #444;
@@ -54,7 +58,7 @@ body main#main-account .form .btn-google, body main#main .continue-main .btn-goo
   border-radius: 3px;
   margin-bottom: 12px;
 }
-body main#main-account .form .btn-new, body main#main-account .form .btn-login {
+body main#main-account .form-box .form .btn-new, body main#main-account .form-box .form .btn-login {
   padding: 10px;
   border: none;
   border-radius: 2px;
@@ -69,6 +73,9 @@ body header#header {
 body header#header .logo {
   font-family: "Lobster", cursive;
   font-size: 20px;
+}
+body header#header #logo a {
+  color: #1D304C;
 }
 body header#header #btn-account {
   font-size: 14px;
@@ -89,6 +96,10 @@ body header#header #nav-desktop ul li:last-of-type {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+body header#header #nav-desktop ul li:last-of-type:hover {
+  background-color: #14d188;
 }
 body header#header #nav-desktop a {
   font-size: 15px;
@@ -203,6 +214,7 @@ body main#main #img-main {
 body main#main #img-main img {
   width: 75%;
   max-width: 592px;
+  transform: scale(-1, 1);
 }
 body main#main .continue-main {
   grid-column: 1/-1;
@@ -217,7 +229,7 @@ body main#main .continue-main .btn-another {
 }
 @media screen and (min-width: 992px) {
   body main#main {
-    grid-gap: 0 80px;
+    grid-gap: 0 130px;
   }
   body main#main #intro-main {
     grid-column: 1/2;
@@ -271,7 +283,7 @@ body main#main .continue-main .btn-another {
     max-width: 968px;
   }
 }
-body main#main-account .form .match {
+body main#main-account .form-box .form .match {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -300,43 +312,105 @@ body main#main-account .form-box {
   height: auto;
   padding: 12px;
 }
-body main#main-account .form {
+body main#main-account .form-box .form {
   padding: 12px;
   background-color: #ffffff;
 }
-body main#main-account .form form {
+body main#main-account .form-box .form form {
   display: flex;
   flex-direction: column;
 }
-body main#main-account .form label {
+body main#main-account .form-box .form label {
   font-size: 12px;
   font-weight: 500;
   margin-bottom: 5px;
 }
-body main#main-account .form input {
+body main#main-account .form-box .form input {
   margin-bottom: 10px;
   background-color: rgba(204, 214, 229, 0.2);
   border: 0;
   padding: 12px;
   border-radius: 3px;
 }
-body main#main-account .form .btn-login {
+body main#main-account .form-box .form .btn-login {
   margin-top: 8px;
   background-color: #28A745;
   color: #ffffff;
 }
-body main#main-account .form .btn-new {
+body main#main-account .form-box .form .btn-new {
   margin-top: 8px;
   background-color: #007BFF;
   color: #ffffff;
 }
-body main#main-account .form .match {
+body main#main-account .form-box .form .match {
   width: 100%;
 }
-body main#main-account .form .match a {
+body main#main-account .form-box .form .match a {
   font-size: 11px;
   padding: auto;
   padding-top: 12px;
+  color: #8392AA;
+}
+body main#main-profile {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+}
+body main#main-profile #profile {
+  width: 100%;
+}
+body main#main-profile .main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+body main#main-profile .main-section img {
+  width: 30%;
+  max-width: 200px;
+  min-width: 110px;
+}
+body main#main-profile .main-section h5 {
+  margin-top: 12px;
+  font-size: 24px;
+  font-weight: 800;
+}
+body main#main-profile .main-section h5 + p {
+  font-size: 13px;
+  color: #8392AA;
+  margin: 8px 0;
+}
+body main#main-profile .contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body main#main-profile .contacts article.contact-item {
+  width: 95%;
+  max-width: 500px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 16px;
+  border-radius: 5px;
+}
+body main#main-profile .contacts article.contact-item:hover img[alt=link-arrow] {
+  transition: all 0.2s ease-in;
+  transform: scale(1.2);
+}
+body main#main-profile .contacts article.contact-item .content {
+  display: flex;
+  align-items: center;
+}
+body main#main-profile .contacts article.contact-item .content p {
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 12px;
+  letter-spacing: 0.3px;
   color: #8392AA;
 }
 

@@ -66,6 +66,7 @@ main#main
         img
             width: 75%
             max-width: 592px
+            transform: scale(-1,1)
 
     .continue-main
         grid-column: 1 / -1
@@ -83,7 +84,7 @@ main#main
             @extend %btn-trans
 
     @include mix.min(lg)
-        grid-gap: 0 80px
+        grid-gap: 0 130px
 
         #intro-main
             grid-column:  1 / 2
