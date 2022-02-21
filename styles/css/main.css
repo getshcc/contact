@@ -45,7 +45,7 @@ body main#main .continue-main .btn-another, body header#header #btn-account {
   color: #8392AA;
   background-color: transparent;
 }
-body main#main-account .form-box .form .btn-google, body main#main .continue-main .btn-google {
+body main#main-empty section#add-item .form .btn-google, body main#main-account .form-box .form .btn-google, body main#main .continue-main .btn-google {
   display: flex;
   background-color: #ffffff;
   color: #444;
@@ -58,7 +58,7 @@ body main#main-account .form-box .form .btn-google, body main#main .continue-mai
   border-radius: 3px;
   margin-bottom: 12px;
 }
-body main#main-account .form-box .form .btn-new, body main#main-account .form-box .form .btn-login {
+body main#main-empty section#add-item .form .btn-recovery, body main#main-empty section#add-item .form .btn-new, body main#main-empty section#add-item .form .btn-login, body main#main-account .form-box .form .btn-recovery, body main#main-account .form-box .form .btn-new, body main#main-account .form-box .form .btn-login {
   padding: 10px;
   border: none;
   border-radius: 2px;
@@ -104,6 +104,19 @@ body header#header #nav-desktop ul li:last-of-type:hover {
 body header#header #nav-desktop a {
   font-size: 15px;
   padding: 12px;
+}
+body header#header #nav-user {
+  display: flex;
+  align-items: center;
+}
+body header#header #nav-user a {
+  padding: auto;
+  padding-left: 8px;
+  font-size: 13px;
+  color: #8392AA;
+}
+body header#header #nav-user img {
+  width: 38px;
 }
 @media screen and (min-width: 768px) {
   body header#header {
@@ -213,7 +226,7 @@ body main#main #img-main {
 }
 body main#main #img-main img {
   width: 75%;
-  max-width: 592px;
+  max-width: 520px;
   transform: scale(-1, 1);
 }
 body main#main .continue-main {
@@ -283,7 +296,7 @@ body main#main .continue-main .btn-another {
     max-width: 968px;
   }
 }
-body main#main-account .form-box .form .match {
+body main#main-empty section#add-item .form .match, body main#main-account .form-box .form .match {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -327,7 +340,7 @@ body main#main-account .form-box .form label {
 }
 body main#main-account .form-box .form input {
   margin-bottom: 10px;
-  background-color: rgba(204, 214, 229, 0.2);
+  background-color: rgba(204, 214, 229, 0.3);
   border: 0;
   padding: 12px;
   border-radius: 3px;
@@ -342,6 +355,9 @@ body main#main-account .form-box .form .btn-new {
   background-color: #007BFF;
   color: #ffffff;
 }
+body main#main-account .form-box .form .btn-recovery {
+  background-color: #ffb900;
+}
 body main#main-account .form-box .form .match {
   width: 100%;
 }
@@ -350,6 +366,53 @@ body main#main-account .form-box .form .match a {
   padding: auto;
   padding-top: 12px;
   color: #8392AA;
+}
+body main#main-account .form-box form#contact-items {
+  width: 100%;
+  max-width: 600px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 4px;
+  border-radius: 4px;
+}
+body main#main-account .form-box form#contact-items input {
+  width: 100%;
+  height: 40px;
+}
+body main#main-account .form-box form#contact-items input[type=text] {
+  border: none;
+  display: block;
+  padding: 12px;
+}
+body main#main-account .form-box form#contact-items input[type=text]::placeholder {
+  font-size: 12px;
+  color: #CCD6E5;
+}
+body main#main-account .form-box form#contact-items .btn-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  padding-right: 0px;
+  padding-left: 6px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+body main#main-account .form-box form#contact-items .btn-items img {
+  width: 32px;
+}
+body main#main-account .form-box form#contact-items .btn-add {
+  background-color: #2deba2;
+  border: none;
+  padding: 16px 24px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
 }
 body main#main-profile {
   grid-column: 1/-1;
@@ -412,6 +475,105 @@ body main#main-profile .contacts article.contact-item .content p {
   margin-left: 12px;
   letter-spacing: 0.3px;
   color: #8392AA;
+}
+body main#main-empty {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+}
+body main#main-empty section#add-item {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+body main#main-empty section#add-item .form {
+  padding: 12px;
+  background-color: #ffffff;
+}
+body main#main-empty section#add-item .form form {
+  display: flex;
+  flex-direction: column;
+}
+body main#main-empty section#add-item .form label {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+body main#main-empty section#add-item .form input {
+  margin-bottom: 10px;
+  background-color: rgba(204, 214, 229, 0.3);
+  border: 0;
+  padding: 12px;
+  border-radius: 3px;
+}
+body main#main-empty section#add-item .form .btn-login {
+  margin-top: 8px;
+  background-color: #28A745;
+  color: #ffffff;
+}
+body main#main-empty section#add-item .form .btn-new {
+  margin-top: 8px;
+  background-color: #007BFF;
+  color: #ffffff;
+}
+body main#main-empty section#add-item .form .btn-recovery {
+  background-color: #ffb900;
+}
+body main#main-empty section#add-item .form .match {
+  width: 100%;
+}
+body main#main-empty section#add-item .form .match a {
+  font-size: 11px;
+  padding: auto;
+  padding-top: 12px;
+  color: #8392AA;
+}
+body main#main-empty section#add-item form#contact-items {
+  width: 100%;
+  max-width: 600px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 4px;
+  border-radius: 4px;
+}
+body main#main-empty section#add-item form#contact-items input {
+  width: 100%;
+  height: 40px;
+}
+body main#main-empty section#add-item form#contact-items input[type=text] {
+  border: none;
+  display: block;
+  padding: 12px;
+}
+body main#main-empty section#add-item form#contact-items input[type=text]::placeholder {
+  font-size: 12px;
+  color: #CCD6E5;
+}
+body main#main-empty section#add-item form#contact-items .btn-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  padding-right: 0px;
+  padding-left: 6px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+body main#main-empty section#add-item form#contact-items .btn-items img {
+  width: 32px;
+}
+body main#main-empty section#add-item form#contact-items .btn-add {
+  background-color: #2deba2;
+  border: none;
+  padding: 16px 24px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

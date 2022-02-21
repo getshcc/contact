@@ -13,7 +13,7 @@
 
     input
         margin-bottom: 10px
-        background-color: rgba(var.$lightBlueGray, .2)
+        background-color: rgba(var.$lightBlueGray, .3)
         border: 0
         padding: 12px
         border-radius: 3px
@@ -22,16 +22,21 @@
         @extend %btn-google
     
     .btn-login
-        @extend %btn-ln
+        @extend %btn-pattern
         margin-top: 8px
         background-color: var.$btnGreen
         color: var.$white
 
     .btn-new
-        @extend %btn-ln
+        @extend %btn-pattern
         margin-top: 8px
         background-color: var.$btnBlue
         color: var.$white
+
+    .btn-recovery
+        @extend %btn-pattern
+        background-color: var.$msYellow
+
     
     .match
         @extend %match
@@ -41,3 +46,55 @@
             padding: auto
                 top: 12px
             color: var.$secondaryText
+
+
+
+form#contact-items
+    width: 100%
+    max-width: 600px
+    height: 55px
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #fff
+    padding: 4px
+    border-radius: 4px
+
+    input
+        width: 100%
+        height: 40px
+    
+    input[type=text]
+        border: none
+        display: block
+        padding: 12px
+
+        &::placeholder
+            font-size: 12px
+            color: var.$lightBlueGray
+        
+
+
+    .btn-items
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 12px
+            right: 0px
+            left: 6px
+        border: none
+        background-color: transparent //var.$lightBlueGray
+        cursor: pointer
+        
+        img
+            width: 32px
+
+    
+    .btn-add
+        background-color: var.$mainColor
+        border: none
+        padding: 16px 24px
+        border-radius: 4px
+        color: var.$white
+        font-weight: 600
+        cursor: pointer
