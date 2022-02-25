@@ -12,6 +12,26 @@
   outline: none;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #CCD6E5;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #A2ADBE;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #8392AA;
+}
+
 body {
   transition: all 0.2s ease-in-out;
 }
@@ -45,7 +65,7 @@ body main#main .continue-main .btn-another, body header#header #btn-account {
   color: #8392AA;
   background-color: transparent;
 }
-body main#main-empty section#add-item .form .btn-google, body main#main-account .form-box .form .btn-google, body main#main .continue-main .btn-google {
+body main#main-empty section#add-item .form .btn-google, body .form .btn-google, body main#main-account .form-box .form .btn-google, body main#main .continue-main .btn-google {
   display: flex;
   background-color: #ffffff;
   color: #444;
@@ -58,7 +78,7 @@ body main#main-empty section#add-item .form .btn-google, body main#main-account 
   border-radius: 3px;
   margin-bottom: 12px;
 }
-body main#main-empty section#add-item .form .btn-recovery, body main#main-empty section#add-item .form .btn-new, body main#main-empty section#add-item .form .btn-login, body main#main-account .form-box .form .btn-recovery, body main#main-account .form-box .form .btn-new, body main#main-account .form-box .form .btn-login {
+body main#main-empty section#add-item .form .btn-recovery, body main#main-empty section#add-item .form .btn-new, body main#main-empty section#add-item .form .btn-login, body .form .btn-recovery, body .form .btn-new, body .form .btn-login, body main#main-account .form-box .form .btn-recovery, body main#main-account .form-box .form .btn-new, body main#main-account .form-box .form .btn-login {
   padding: 10px;
   border: none;
   border-radius: 2px;
@@ -120,7 +140,7 @@ body header#header #nav-user img {
 }
 @media screen and (min-width: 768px) {
   body header#header {
-    padding: 12px 36px;
+    padding: 12px;
   }
   body header#header #nav-mobile {
     display: none;
@@ -155,7 +175,7 @@ body footer#footer #copyright a {
 }
 @media screen and (min-width: 768px) {
   body footer#footer {
-    padding: 0 36px;
+    padding: 12px;
     justify-content: space-between;
     align-items: center;
   }
@@ -296,7 +316,7 @@ body main#main .continue-main .btn-another {
     max-width: 968px;
   }
 }
-body main#main-empty section#add-item .form .match, body main#main-account .form-box .form .match {
+body main#main-empty section#add-item .form .match, body .form .match, body main#main-account .form-box .form .match {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -369,7 +389,7 @@ body main#main-account .form-box .form .match a {
 }
 body main#main-account .form-box form#contact-items {
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   height: 55px;
   display: flex;
   justify-content: center;
@@ -413,6 +433,9 @@ body main#main-account .form-box form#contact-items .btn-add {
   color: #ffffff;
   font-weight: 600;
   cursor: pointer;
+}
+body main#main-account .form-box #social-items .search input {
+  margin-bottom: 0 !important;
 }
 body main#main-profile {
   grid-column: 1/-1;
@@ -458,7 +481,7 @@ body main#main-profile .contacts article.contact-item {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
-  padding: 16px;
+  padding: 20px;
   border-radius: 5px;
 }
 body main#main-profile .contacts article.contact-item:hover img[alt=link-arrow] {
@@ -476,6 +499,98 @@ body main#main-profile .contacts article.contact-item .content p {
   letter-spacing: 0.3px;
   color: #8392AA;
 }
+body .form {
+  padding: 12px;
+  background-color: #ffffff;
+}
+body .form form {
+  display: flex;
+  flex-direction: column;
+}
+body .form label {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+body .form input {
+  margin-bottom: 10px;
+  background-color: rgba(204, 214, 229, 0.3);
+  border: 0;
+  padding: 12px;
+  border-radius: 3px;
+}
+body .form .btn-login {
+  margin-top: 8px;
+  background-color: #28A745;
+  color: #ffffff;
+}
+body .form .btn-new {
+  margin-top: 8px;
+  background-color: #007BFF;
+  color: #ffffff;
+}
+body .form .btn-recovery {
+  background-color: #ffb900;
+}
+body .form .match {
+  width: 100%;
+}
+body .form .match a {
+  font-size: 11px;
+  padding: auto;
+  padding-top: 12px;
+  color: #8392AA;
+}
+body form#contact-items {
+  width: 100%;
+  max-width: 500px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 4px;
+  border-radius: 4px;
+}
+body form#contact-items input {
+  width: 100%;
+  height: 40px;
+}
+body form#contact-items input[type=text] {
+  border: none;
+  display: block;
+  padding: 12px;
+}
+body form#contact-items input[type=text]::placeholder {
+  font-size: 12px;
+  color: #CCD6E5;
+}
+body form#contact-items .btn-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  padding-right: 0px;
+  padding-left: 6px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+body form#contact-items .btn-items img {
+  width: 32px;
+}
+body form#contact-items .btn-add {
+  background-color: #2deba2;
+  border: none;
+  padding: 16px 24px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+body #social-items .search input {
+  margin-bottom: 0 !important;
+}
 body main#main-empty {
   grid-column: 1/-1;
   display: flex;
@@ -483,7 +598,9 @@ body main#main-empty {
 }
 body main#main-empty section#add-item {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
 }
 body main#main-empty section#add-item .form {
@@ -530,7 +647,7 @@ body main#main-empty section#add-item .form .match a {
 }
 body main#main-empty section#add-item form#contact-items {
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   height: 55px;
   display: flex;
   justify-content: center;
@@ -574,6 +691,92 @@ body main#main-empty section#add-item form#contact-items .btn-add {
   color: #ffffff;
   font-weight: 600;
   cursor: pointer;
+}
+body main#main-empty section#add-item #social-items .search input {
+  margin-bottom: 0 !important;
+}
+body main#main-empty section#add-item .img-empty {
+  margin: auto 0;
+}
+body main#main-empty #social-items {
+  width: 100%;
+  max-width: 500px;
+  height: 78vh;
+  background-color: #fff;
+  margin-top: 16px;
+  padding: 8px 0px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  border-radius: 4px;
+}
+body main#main-empty #social-items .social-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+}
+body main#main-empty #social-items .social-item p {
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 12px;
+}
+body .editable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 12px;
+  width: 100%;
+  max-width: 500px;
+}
+body .editable .aDEditMode {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px;
+  padding-top: 0;
+}
+body .editable .aDEditMode p {
+  cursor: pointer;
+  font-size: 12px;
+  color: #8392AA;
+}
+body .editable .contacts {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .editable .edit-items {
+  display: flex;
+  align-items: center;
+}
+body .editable .edit-items li {
+  margin: 0px 6px;
+}
+body .editable article.contact-item {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 20px;
+  border-radius: 5px;
+}
+body .editable article.contact-item .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .editable article.contact-item .content p {
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 12px;
+  letter-spacing: 0.3px;
+  color: #8392AA;
 }
 
 /*# sourceMappingURL=main.css.map */

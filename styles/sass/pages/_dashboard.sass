@@ -1,3 +1,6 @@
+@import '../components/forms'
+
+    
 main#main-empty
     grid-column: 1 / -1
     display: flex
@@ -6,7 +9,89 @@ main#main-empty
 
     section#add-item
         display: flex
-        justify-content: center
+        justify-content: flex-start
+        align-items: center
+        flex-direction: column
         width: 100%
 
         @import '../components/forms'
+
+
+        .img-empty
+            margin: auto 0
+    
+    #social-items
+        width: 100%
+        max-width: 500px
+        height: 78vh
+        background-color: #fff
+        margin-top: 16px
+        padding: 8px 0px
+        display: flex
+        flex-direction: column
+        overflow-y: scroll
+        border-radius: 4px
+
+        .social-item
+            display: flex
+            align-items: center
+            padding: 12px
+
+            p
+                font-size: 14px
+                font-weight: 500
+                margin-left: 12px
+
+.editable
+    @include flex-center(column)
+    margin-top: 12px
+    width: 100%
+    max-width: 500px
+
+    .aDEditMode
+        width: 100%
+        display: flex
+        justify-content: flex-end
+        padding: 12px
+            top: 0
+        p
+            cursor: pointer
+            font-size: 12px
+            color: var.$secondaryText
+
+    .contacts
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+
+    .edit-items
+        display: flex
+        align-items: center
+
+        li
+            margin: 0px 6px
+
+    article.contact-item
+        width: 100%
+        max-width: 500px
+        background-color: var.$white
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 12px
+        padding: 20px
+        border-radius: 5px
+
+        .content
+                display: flex
+                align-items: center
+                justify-content: center
+
+                p
+                    font-size: 12px
+                    font-weight: 600
+                    margin-left: 12px
+                    letter-spacing: .3px
+                    color: var.$secondaryText
